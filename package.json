@@ -1,0 +1,16 @@
+{
+  "name": "dt211g-moment3",
+  "version": "1.0.0",
+  "author": "Kim Dudenhöfer",
+  "license": "ISC",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3"
+  }
+}

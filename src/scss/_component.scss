@@ -1,0 +1,10 @@
+@use "base";
+
+p {
+    font-family: base.$main-fonts;
+}
+
+a {
+    font-family: base.$main-fonts;
+    text-decoration: none;
+}

@@ -1,0 +1,44 @@
+@use "base";
+
+header { 
+    padding: 20px 2% 20px 2%;
+    margin-bottom: 40px;
+    background-color: base.$primary-color; 
+}
+
+body { 
+    margin: 0px;
+    background-color: base.$secondary-color; 
+}
+
+footer {
+    padding: 20px 2% 20px 2%;
+    margin-top: 40px;
+    background-color: base.$primary-color; 
+}
+
+nav {
+    width: fit-content;
+    margin-left: auto;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            padding: 20px;
+
+            ul {
+                display: none;
+            }
+        }
+    }
+}
+
+#closeMenu {
+    display: none;
+}
+
+#openMenu {
+    display: none;
+}
