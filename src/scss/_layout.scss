@@ -1,13 +1,14 @@
 @use "base";
 
-header { 
-    padding: 20px 2% 20px 2%;
+header {  
+    height: 100px;
     margin-bottom: 40px;
     background-color: base.$primary-color; 
 }
 
 body { 
     margin: 0px;
+    padding: 0px;
     background-color: base.$secondary-color; 
 }
 
@@ -24,13 +25,35 @@ nav {
     ul {
         display: flex;
         list-style-type: none;
+        margin: 0px;
+    }
+
+    li {
+        padding: 40px 20px 40px 20px;
+
+        ul {
+            display: none;
+            padding-left: 0px;
+            background-color: base.$tertiary-color;
+        }
 
         li {
-            padding: 20px;
+            padding: 40px 0px 0px 0px;
+        }
 
-            ul {
-                display: none;
+        li:hover {
+            a {
+                text-decoration: underline;
             }
+        }
+    }
+
+    li:hover {
+        background-color: base.$tertiary-color;
+
+        ul {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

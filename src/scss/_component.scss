@@ -7,4 +7,18 @@ p {
 a {
     font-family: base.$main-fonts;
     text-decoration: none;
+    color: #000;
+}
+
+nav {
+
+    a {
+        font-weight: 500;
+    }
+
+    li:hover {
+        a {
+            color: #fff;
+        }
+    }
 }
