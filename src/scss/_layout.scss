@@ -1,8 +1,8 @@
 @use "base";
 
+/* General */
 header {  
     height: 100px;
-    margin-bottom: 40px;
     background-color: base.$primary-color; 
     display: flex;
 }
@@ -15,12 +15,13 @@ body {
 
 footer {
     padding: 20px 2% 20px 2%;
-    margin-top: 40px;
     background-color: base.$primary-color; 
     z-index: 1;
 }
 
+/* Navigation */
 nav {
+    z-index: 4;
     width: fit-content;
     margin-left: auto;
 
@@ -36,7 +37,7 @@ nav {
         ul {
             display: none;
             padding-left: 0px;
-            background-color: base.$tertiary-color;
+            background-color: darken(base.$primary-color, 20%);
         }
 
         li {
@@ -51,7 +52,7 @@ nav {
     }
 
     li:hover {
-        background-color: base.$tertiary-color;
+        background-color: darken(base.$primary-color, 20%);
 
         ul {
             display: flex;
@@ -68,10 +69,28 @@ nav {
     display: none;
 }
 
+/* Sections */
+section {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Home page */
+#homeSection {
+    display: flex;
+
+    div {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 640px) {
     #openMenu { display: block; }
     #closeMenu { display: block; }
-    nav { display: none; z-index: 4;
+    nav { display: none;
         ul { flex-direction: column; padding-top: 20px; padding-bottom: 20px; background-color: base.$tertiary-color; }
         li { padding: 20px 40px 20px 0px; 
             ul { display: block; padding: 0 0 0 10px; }

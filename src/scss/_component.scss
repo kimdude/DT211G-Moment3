@@ -1,18 +1,20 @@
 @use "base";
 
 /* Text */
-h1 {
+p {
     font-family: base.$main-fonts;
+}
+
+h1 {
+    @extend p;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 h2 {
-    font-family: base.$main-fonts;
+    @extend p;
+    font-size: 1.6rem;
     font-weight: 600;
-}
-
-p {
-    font-family: base.$main-fonts;
 }
 
 /* Links */
@@ -27,26 +29,20 @@ nav {
     a {
         font-weight: 500;
     }
-
-    li:hover {
-        a {
-            color: #fff;
-        }
-    }
 }
 
 /* Main menu buttons */
+#closeMenu {
+    background-color: base.$tertiary-color;
+    border: none;
+    padding: 10px;
+}
+
 #openMenu {
     background-color: base.$primary-color;
     border: none;
     margin-left: auto;
     margin-right: 2%;
-}
-
-#closeMenu {
-    background-color: base.$tertiary-color;
-    border: none;
-    padding: 10px;
 }
 
 .menuIcon {
@@ -76,7 +72,23 @@ nav {
     margin-top: -7;
 }
 
-/* Pictures*/
+/* Pictures */
+/* Skapar återanvändbar funktion för att ändra storlek och border radius. */
+@mixin resize($width, $border) {
+    width: $width;
+    border-radius: $border;
+    height: auto;
+}
+
+/* Använder resize-funktionen på bilder med respektive klass. */
+.pictureHorizontal {
+    @include resize(500px, 15px);
+}
+
+.sideBar {
+    @include resize(300px, 0px);
+}
+
 .pictureDM {
     display: none;
 }
