@@ -1,9 +1,11 @@
 @use "base";
 
+/* Text */
 p {
     font-family: base.$main-fonts;
 }
 
+/* Links */
 a {
     font-family: base.$main-fonts;
     text-decoration: none;
@@ -21,4 +23,45 @@ nav {
             color: #fff;
         }
     }
+}
+
+/* Main menu buttons */
+#openMenu {
+    background-color: base.$primary-color;
+    border: none;
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+#closeMenu {
+    background-color: base.$tertiary-color;
+    border: none;
+    padding: 10px;
+}
+
+.menuIcon {
+    display: flex;
+    flex-direction: column;
+}
+
+.bars {
+    width: 25px;
+    height: 4px;
+    margin: 3px;
+    color: #000;
+    background-color: #000;
+}
+
+.cross1, .cross2 {
+    color: #fff;
+    background-color: #fff;
+}
+
+.cross1 {
+    transform: rotate(140deg);
+}
+
+.cross2 {
+    transform: rotate(40deg);
+    margin-top: -7;
 }
