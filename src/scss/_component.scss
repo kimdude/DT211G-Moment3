@@ -1,6 +1,16 @@
 @use "base";
 
 /* Text */
+h1 {
+    font-family: base.$main-fonts;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: base.$main-fonts;
+    font-weight: 600;
+}
+
 p {
     font-family: base.$main-fonts;
 }
@@ -64,4 +74,9 @@ nav {
 .cross2 {
     transform: rotate(40deg);
     margin-top: -7;
+}
+
+/* Pictures*/
+.pictureDM {
+    display: none;
 }
