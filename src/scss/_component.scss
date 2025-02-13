@@ -92,3 +92,17 @@ nav {
 .pictureDM {
     display: none;
 }
+
+/* Screens with dark-mode */
+@media (prefers-color-scheme: dark) {
+    a, p { color: #fff; }
+    .pictureDM { display: block; }
+    .pictureLM {display: none;}
+}
+
+/* Screens under 640px*/
+@media screen and (max-width: 640px) {
+    nav { 
+        a { color: #fff; }
+    }
+}
