@@ -1,5 +1,5 @@
-#DT211G - Frontend-baserad webbutveckling
-##Moment 3 - CSS-preprocessorer
+# DT211G - Frontend-baserad webbutveckling
+## Moment 3 - CSS-preprocessorer
 
 Projektet går ut på att fortsätta att arbeta med en automatiserad arbetsprocess med Parcel. 
 Utvecklingsmiljön ska kunna konvertera SASS (scss-filer) till vanlig CSS för publicering.
