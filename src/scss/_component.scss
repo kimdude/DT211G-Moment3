@@ -88,7 +88,7 @@ section {
 }
 
 /* Pictures */
-/* Skapar återanvändbar funktion för att ändra storlek och form. */
+/* Creating reusable function to rezise and shape */
 @mixin resize($width, $shape) {
     width: $width;
 
@@ -101,7 +101,7 @@ section {
     }
 }
 
-/* Använder resize-funktionen på bilder med respektive klass. */
+/* Using resize function for each class bleow */
 .pictureHorizontal {
     @include resize(500px, "circle");
 }
@@ -112,6 +112,7 @@ section {
     margin-left: auto;
 }
 
+/* Hiding picture in light-mode */
 .pictureDM {
     display: none;
 }
@@ -121,6 +122,8 @@ section {
     a, p, h1, h2 { color: #fff; }
     #openMenu { background-color: base.$primary-color-dm; }
     .bars { background-color: #fff; }
+
+    /* Switching picture in dark-mode */
     .pictureDM { display: block; }
     .pictureLM { display: none; }
 }
