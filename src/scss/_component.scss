@@ -38,6 +38,14 @@ section {
     li {
         @extend p;
     }
+    a:hover {
+        text-decoration: underline;
+    }
+    a::after {
+        color: base.$primary-color; 
+        content: "►";
+        margin-left: 10px;
+    }
 }
 
 /* Main menu buttons */
@@ -63,12 +71,10 @@ section {
     width: 25px;
     height: 4px;
     margin: 3px;
-    color: #000;
     background-color: #000;
 }
 
 .cross1, .cross2 {
-    color: #fff;
     background-color: #fff;
 }
 
@@ -101,7 +107,9 @@ section {
 }
 
 .sideBar {
-    @include resize(300px, "rectangle");
+    @include resize(80%, "rectangle");
+    display: block;
+    margin-left: auto;
 }
 
 .pictureDM {
@@ -111,8 +119,16 @@ section {
 /* Screens with dark-mode */
 @media (prefers-color-scheme: dark) {
     a, p, h1, h2 { color: #fff; }
+    #openMenu { background-color: base.$primary-color-dm; }
+    .bars { background-color: #fff; }
     .pictureDM { display: block; }
-    .pictureLM {display: none;}
+    .pictureLM { display: none; }
+}
+
+/* Screens under 800px*/
+@media screen and (max-width: 800px) {
+    .sideBar { @include resize(300px, "circle"); margin-right: auto; }
+    .pictureHorizontal { @include resize(300px, "circle"); }
 }
 
 /* Screens under 640px*/
