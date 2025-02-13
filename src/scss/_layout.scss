@@ -91,7 +91,7 @@ section {
     header, footer { background-color: base.$primary-color-dm; }
     body { background-color: base.$secondary-color-dm; }
     nav {
-        li:hover { background-color: lighten(base.$primary-color-dm, 20%); }
+        li:hover { background-color: lighten(base.$primary-color-dm,15%); }
     }
 }
 

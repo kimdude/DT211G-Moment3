@@ -73,20 +73,26 @@ nav {
 }
 
 /* Pictures */
-/* Skapar återanvändbar funktion för att ändra storlek och border radius. */
-@mixin resize($width, $border) {
+/* Skapar återanvändbar funktion för att ändra storlek och form. */
+@mixin resize($width, $shape) {
     width: $width;
-    border-radius: $border;
-    height: auto;
+
+    @if $shape == "circle" {
+        height: $width;
+        border-radius: 50%;
+    } @else {
+        height: auto;
+        border-radius: 15px;
+    }
 }
 
 /* Använder resize-funktionen på bilder med respektive klass. */
 .pictureHorizontal {
-    @include resize(500px, 15px);
+    @include resize(500px, "circle");
 }
 
 .sideBar {
-    @include resize(300px, 0px);
+    @include resize(300px, "rectangle");
 }
 
 .pictureDM {
