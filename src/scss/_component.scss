@@ -3,16 +3,19 @@
 /* Text */
 p {
     font-family: base.$main-fonts;
+    font-size: 1.1rem;
+    max-width: 70ch;
+    line-height: 1.5rem;
 }
 
 h1 {
-    @extend p;
+    font-family: base.$main-fonts;
     font-size: 2rem;
     font-weight: 600;
 }
 
 h2 {
-    @extend p;
+    font-family: base.$main-fonts;
     font-size: 1.6rem;
     font-weight: 600;
 }
@@ -28,6 +31,12 @@ nav {
 
     a {
         font-weight: 500;
+    }
+}
+
+section {
+    li {
+        @extend p;
     }
 }
 
@@ -101,7 +110,7 @@ nav {
 
 /* Screens with dark-mode */
 @media (prefers-color-scheme: dark) {
-    a, p { color: #fff; }
+    a, p, h1, h2 { color: #fff; }
     .pictureDM { display: block; }
     .pictureLM {display: none;}
 }
